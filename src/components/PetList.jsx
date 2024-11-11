@@ -5,14 +5,17 @@ const PetList = (props) => {
       </a>
      );
   
-    return <div>
+    return <div className="sidebar-container">
       <h1>Pet List</h1>
+        
+        <div className="list-container">
+          <ul>
+            {!props.petList.length ? <h2>No Pets Yet!</h2> : <ul  role="list">{pets}</ul>}
+          </ul>
+        </div>
         <button onClick={props.handleFormView}>
         {props.isFormOpen ? 'Close Form' : 'New Pet'}
         </button>
-      <ul>
-        {!props.petList.length ? <h2>No Pets Yet!</h2> : <ul>{pets}</ul>}
-      </ul>
     </div>
   };
   

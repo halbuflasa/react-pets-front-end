@@ -1,5 +1,5 @@
 // src/App.jsx
-
+import './App.css';
 import { useState, useEffect } from 'react';
 import * as petService from './services/petService';
 
